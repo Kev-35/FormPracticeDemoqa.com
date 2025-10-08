@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
@@ -11,10 +12,9 @@ public class FormDemoQa {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        //Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = true;
         //Configuration.timeout = 4000;
     }
-
     @Test
     void forbDemoQA(){
         open("/automation-practice-form");
