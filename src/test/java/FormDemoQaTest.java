@@ -5,17 +5,16 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class FormDemoQa {
+public class FormDemoQaTest {
     @BeforeAll
-    static void beforeAll(){
+    static void setupEnvironment(){
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
     }
     @Test
-    void forbDemoQA(){
+    void successFillingFormTest(){
         open("/automation-practice-form");
-
         executeJavaScript("$('footer').remove();");
         executeJavaScript("$('#fixedban').remove();");
 
@@ -27,7 +26,7 @@ public class FormDemoQa {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").$("[value='3']").click();
         $(".react-datepicker__day.react-datepicker__day--005.react-datepicker__day--weekend").click();
-        $("#subjectsInput").setValue("Maths").pressEnter();
+        $("#subjectsInput").setValue("Maths").click();
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("1.png");
         $("#currentAddress").setValue("Lesovskay 3");
