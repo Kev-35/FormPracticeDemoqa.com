@@ -26,7 +26,7 @@ public class FormDemoQaTest {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").$("[value='3']").click();
         $(".react-datepicker__day.react-datepicker__day--005.react-datepicker__day--weekend").click();
-        $("#subjectsInput").setValue("Maths").click();
+        $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("1.png");
         $("#currentAddress").setValue("Lesovskay 3");
