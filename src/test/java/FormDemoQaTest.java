@@ -47,5 +47,6 @@ public class FormDemoQaTest {
         $(".table-responsive").shouldHave(text("Lesovskay 3"));
         $(".table-responsive").shouldHave(text("NCR Noida"));
         $("#closeLargeModal").click();
+        System.out.println("");
     }
 }
